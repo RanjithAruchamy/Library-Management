@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="image/logo.gif" alt="logo" width="350" height="90">
+        <h2>Library Management System</h2>
+        <div class="box">
+            <h2 class="title">Login Form</h2>
+            <a href="index.html"><button class="back">Back</button></a>
+            <div class="login-form">
+                <form action="librarian.html" >
+                    <fieldset>
+                        <label for="userId" class="userLabel">User Id:</label>
+                        <input class="userInput" type="text" name="userId" placeholder="Enter your userId...">
+                        <label for="userId" class="userLabel">Password:</label>
+                        <input class="userInput" type="password" name="password" placeholder="Enter your password...">    
+                        <input id="role" type="text" name="role" hidden value="">
+                        <input type="submit" value="Submit">  
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('input').click(function(){
+            let role = window.location.search            
+            $('#role').val(role.slice(6));
+        });
+    </script>
+</body>
+</html>
